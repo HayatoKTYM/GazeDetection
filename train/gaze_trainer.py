@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from glob import glob
 from sklearn.model_selection import KFold
-
+from sklearn.metrics import classification_report
 from gaze_model import CNN
 from extract_feature import Extract_feature
 

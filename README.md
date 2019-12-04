@@ -8,3 +8,4 @@
 <p>3. 視線推定の学習を行うプログラム (train)</p>
 <p>4. 視線推定の評価を行うプログラム (demo)</p>
 
+![result](https://github.com/HayatoKTYM/GazeDetection/blob/torch/i91n5-9qfug.gif)

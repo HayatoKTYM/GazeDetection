@@ -39,14 +39,12 @@ def split_eyeimage(folder):
         if face is None:
             continue
         cv2.imwrite(file.replace('out', 'face'), face)
-        cv2.imwrite(file.replace('out', 'face').replace('.png','_flip.png'), cv2.flip(face,1))
         cv2.imwrite(file.replace('out', 'eye'), eye)
-        cv2.imwrite(file.replace('out', 'eye').replace('.png','_flip.png'), cv2.flip(eye,1))
         PATHS.append([file.replace('out', 'face')] + landmark)
     csv_writer.writerows(PATHS)
     f.close()
 
-modelDir = os.path.join('/Users/hayato/openface/models')
+modelDir = os.path.join('/Users/hayato/openface/models') # path要変更!!!!!!!
 dlibModelDir = os.path.join(modelDir, 'dlib')
 openfaceModelDir = os.path.join(modelDir, 'openface')
 align = openface.AlignDlib(os.path.join(dlibModelDir, "shape_predictor_68_face_landmarks.dat"))
